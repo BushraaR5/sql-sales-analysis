@@ -74,7 +74,7 @@ Enhancements in this project include:
 - Segmented customers into groups like Champions, Loyal, At Risk, etc.
 - Focused on interpreting recency as a dominant behavioral signal
 
-<img src="outputs/01_rfm_analysis_result.png">
+<img src="3_outputs/01_rfm_analysis_result.png">
 
 ---
 
@@ -84,12 +84,12 @@ Enhancements in this project include:
 - Found that a small percentage of customers drive a large share of revenue
 - Highlighted existence of a high-value core customer base
 
-<img src="outputs/02_pareto_analysis_result.png">
+<img src="3_outputs/02_pareto_analysis_result.png">
 
 - Ranked products using `ROW_NUMBER()` and `CROSS APPLY`
 - Identified top-performing products per category and subcategory
 
-<img src="outputs/07_product_contribution_analysis_result_1.png">
+<img src="3_outputs/07_product_contribution_analysis_result_1.png">
 
 ---
 
@@ -99,7 +99,7 @@ Enhancements in this project include:
 - Used `LAG()` to calculate growth rates
 - Identified seasonality and trend shifts
 
-<img src="outputs/02_monthly_sales_trend_result.png">
+<img src="3_outputs/02_monthly_sales_trend_result.png">
 
 ---
 
@@ -109,7 +109,7 @@ Enhancements in this project include:
 - Calculated percentage of customers lost and associated revenue impact
 - Optimized query using conditional aggregation
 
-<img src="outputs/08_churn_analysis_result.png">
+<img src="3_outputs/08_churn_analysis_result.png">
 
 ---
 
@@ -119,7 +119,7 @@ Enhancements in this project include:
 - Calculated Support, Confidence, and Lift
 - Highlighted cross-selling opportunities
 
-<img src="outputs/10_basket_analysis_result.png">
+<img src="3_outputs/10_basket_analysis_result.png">
 
 ---
 
@@ -128,7 +128,7 @@ Enhancements in this project include:
 - Measured stability using standard deviation and coefficient of variation
 - Classified products into stable vs volatile categories
 
-<img src="outputs/11_product_revenue_volatility_result.png">
+<img src="3_outputs/11_product_revenue_volatility_result.png">
 
 ---
 
