@@ -74,7 +74,7 @@ Enhancements in this project include:
 - Segmented customers into groups like Champions, Loyal, At Risk, etc.
 - Focused on interpreting recency as a dominant behavioral signal
 
-<img src="3_outputs/01_rfm_analysis_result.png">
+![RFM Segmentation Results](3_outputs/01_rfm_analysis_result.png)
 
 ---
 
