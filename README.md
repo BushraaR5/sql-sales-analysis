@@ -76,8 +76,6 @@ Enhancements in this project include:
 - Segmented customers into groups like Champions, Loyal, At Risk, etc.
 - Focused on interpreting recency as a dominant behavioral signal
 
-![RFM Segmentation Results](3_outputs/01_rfm_analysis_result.png)
-
 ---
 
 ### Revenue Concentration (Pareto Analysis)
@@ -85,13 +83,8 @@ Enhancements in this project include:
 - Identified contribution of top 20% customers
 - Found that a small percentage of customers drive a large share of revenue
 - Highlighted existence of a high-value core customer base
-
-<img src="3_outputs/02_pareto_analysis_result.png">
-
 - Ranked products using `ROW_NUMBER()` and `CROSS APPLY`
 - Identified top-performing products per category and subcategory
-
-<img src="3_outputs/07_product_contribution_analysis_result.png">
 
 ---
 
@@ -101,8 +94,6 @@ Enhancements in this project include:
 - Used `LAG()` to calculate growth rates
 - Identified seasonality and trend shifts
 
-<img src="3_outputs/02_monthly_sales_trend_result.png">
-
 ---
 
 ### Churn Analysis
@@ -110,8 +101,6 @@ Enhancements in this project include:
 - Identified churned customers using recency thresholds
 - Calculated percentage of customers lost and associated revenue impact
 - Optimized query using conditional aggregation
-
-<img src="3_outputs/08_churn_analysis_result.png">
 
 ---
 
@@ -121,28 +110,12 @@ Enhancements in this project include:
 - Calculated Support, Confidence, and Lift
 - Highlighted cross-selling opportunities
 
-<img src="3_outputs/10_basket_analysis_result.png">
-
 ---
 
 ### Product Revenue Volatility
 
 - Measured stability using standard deviation and coefficient of variation
 - Classified products into stable vs volatile categories
-
-<img src="3_outputs/11_product_revenue_volatility_result.png">
-
----
-
-## 🔍 Key Insights
-
-- Customer value is highly concentrated, with a small segment contributing disproportionately to total revenue (long-tail distribution)
-- High-value customers can be identified early using RFM segmentation, enabling targeted retention strategies
-- Revenue growth accelerated significantly in 2013, supported by consistent upward trends in rolling averages
-- Churn impact is driven more by customer value than volume, with high-value segments posing the greatest risk
-- Product revenue follows a Pareto distribution, with a small subset driving the majority of sales
-- Product associations reveal strong cross-selling opportunities that can increase average order value
-- Revenue volatility varies across products, highlighting stability differences and inventory planning implications
 
 ---
 
@@ -159,6 +132,8 @@ Each visualization is built directly from SQL outputs, ensuring analytical accur
 - Customers are distributed across segments such as Lost, New, High Potential, and Cannot Lose Them
 - A significant portion falls into churn-risk categories, indicating retention opportunities
 
+![Customer Segmentation](4_visualizations/customer_segmentation_visualization.png)
+
 ---
 
 ### 📈 Monthly Sales Trend & Growth
@@ -167,21 +142,7 @@ Each visualization is built directly from SQL outputs, ensuring analytical accur
 - A 3-month rolling average was used to smooth volatility and reveal underlying trends
 - MoM growth highlights fluctuations during expansion phases
 
----
-
-### 📉 Customer Lifetime Value Distribution (Long-Tail)
-
-- Customer value follows a long-tail distribution
-- A small group of customers contributes disproportionately high value
-- Majority of customers fall into low-value segment
-
----
-
-### 🔄 Customer Retention Distribution
-
-- High retention group dominates the customer base
-- Clear segmentation between high and low retention cohorts
-- Indicates opportunities to convert medium/low retention users
+![Monthly Sales Trend](4_visualizations/monthly_sales_trend_visualizationn.png)
 
 ---
 
@@ -191,6 +152,8 @@ Each visualization is built directly from SQL outputs, ensuring analytical accur
 - Churn impact is not volume-driven but value-driven
 - Highlights need for targeted retention strategies
 
+![Churn_Analysis](4_visualizations/churn_analysis_visualization.png)
+
 ---
 
 ### 📊 Product Revenue Concentration (Pareto)
@@ -198,6 +161,8 @@ Each visualization is built directly from SQL outputs, ensuring analytical accur
 - Top products contribute ~80% of total revenue
 - Strong Pareto effect indicates revenue concentration risk
 - Enables prioritization of high-impact products
+
+![Revenue_by_Products](4_visualizations/revenue_by_product_visualization.png)
 
 ---
 
@@ -207,6 +172,8 @@ Each visualization is built directly from SQL outputs, ensuring analytical accur
 - Low-revenue products show higher volatility
 - Helps identify reliable vs risky product segments
 
+![Product_revenue_Volatility](4_visualizations/product_revenue_volatility_visualization.png)
+
 ---
 
 ### 🛒 Product Associations (Basket Analysis)
@@ -214,6 +181,20 @@ Each visualization is built directly from SQL outputs, ensuring analytical accur
 - Strong product pairings identified using lift score
 - Highlights cross-selling opportunities
 - Useful for recommendation strategies
+
+![Basket_Analysis](4_visualizations/basket_analysis_visualization.png)
+
+---
+
+## 🔍 Key Insights
+
+- Customer value is highly concentrated, with a small segment contributing disproportionately to total revenue (long-tail distribution)
+- High-value customers can be identified early using RFM segmentation, enabling targeted retention strategies
+- Revenue growth accelerated significantly in 2013, supported by consistent upward trends in rolling averages
+- Churn impact is driven more by customer value than volume, with high-value segments posing the greatest risk
+- Product revenue follows a Pareto distribution, with a small subset driving the majority of sales
+- Product associations reveal strong cross-selling opportunities that can increase average order value
+- Revenue volatility varies across products, highlighting stability differences and inventory planning implications
 
 ---
 
