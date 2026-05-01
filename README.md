@@ -142,7 +142,7 @@ Each visualization is built directly from SQL outputs, ensuring analytical accur
 - A 3-month rolling average was used to smooth volatility and reveal underlying trends
 - MoM growth highlights fluctuations during expansion phases
 
-![Monthly Sales Trend](4_visualizations/monthly_sales_trend_visualizationn.png)
+![Monthly_Sales_trend](4_visualizations/monthly_sales_trend_visualization.png)
 
 ---
 
