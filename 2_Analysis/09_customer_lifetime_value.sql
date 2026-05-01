@@ -1,8 +1,8 @@
 ﻿/*
 ===========================================================
-📊 Analysis: Customer Lifetime Value (LTV) Ranking
+Analysis: Customer Lifetime Value (LTV) Ranking
 
-🧠 Objective:
+Objective:
 Identify high-value customers based on their efficiency as
 long-term spenders using:
 
@@ -13,14 +13,14 @@ of time.
 
 -----------------------------------------------------------
 
-⚙️ Methodology:
+Methodology:
 - Calculate lifetime value using total_sales and lifespan
 - Rank customers based on LTV (descending)
 - Handle division-by-zero safely using NULLIF()
 
 -----------------------------------------------------------
 
-📈 Output:
+Output:
 - Customer details
 - Lifetime value (LTV)
 - Ranking based on LTV
@@ -30,7 +30,7 @@ of time.
 
 /*
 -----------------------------------------------------------
-🧠 Design Decisions & Justification
+Design Decisions & Justification
 
 1. Why use total_sales / lifespan?
    - Captures spending efficiency over time

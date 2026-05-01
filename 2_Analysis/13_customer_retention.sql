@@ -1,8 +1,8 @@
 ﻿/*
 ===========================================================
-📊 Analysis: Customer Retention Ratio
+Analysis: Customer Retention Ratio
 
-🧠 Objective:
+Objective:
 Measure customer retention by evaluating how consistently
 customers make purchases over their active lifespan.
 
@@ -11,7 +11,7 @@ Retention Ratio =
 
 -----------------------------------------------------------
 
-⚙️ Methodology:
+Methodology:
 1. Convert order dates to monthly granularity
 2. Calculate:
     → Months active (distinct months with purchases)
@@ -20,7 +20,7 @@ Retention Ratio =
 
 -----------------------------------------------------------
 
-📈 Output:
+Output:
 - Customer details
 - Months active
 - Total months
@@ -31,7 +31,7 @@ Retention Ratio =
 
 /*
 -----------------------------------------------------------
-🧠 Design Decisions & Justification
+Design Decisions & Justification
 
 1. Why use EOMONTH()?
    - Normalizes all transactions to monthly level

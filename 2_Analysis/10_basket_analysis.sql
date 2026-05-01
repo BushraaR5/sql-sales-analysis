@@ -1,8 +1,8 @@
 ﻿/*
 ===========================================================
-📊 Analysis: Product Basket Analysis (Association Rules)
+Analysis: Product Basket Analysis (Association Rules)
 
-🧠 Objective:
+Objective:
 Identify frequently co-purchased product pairs and evaluate
 their relationships using:
 
@@ -14,7 +14,7 @@ Used to power product recommendations and bundling strategies.
 
 -----------------------------------------------------------
 
-⚙️ Methodology:
+Methodology:
 1. Create product-level transaction dataset
 2. Generate product pairs using self-join
 3. Calculate:
@@ -24,7 +24,7 @@ Used to power product recommendations and bundling strategies.
 
 -----------------------------------------------------------
 
-📈 Output:
+Output:
 - Product pairs
 - Support, Confidence, Lift
 - Recommendation flag
@@ -34,7 +34,7 @@ Used to power product recommendations and bundling strategies.
 
 /*
 -----------------------------------------------------------
-🧠 Design Decisions & Justification
+esign Decisions & Justification
 
 1. Why self-join on order_number?
    - Identifies products purchased together in same transaction

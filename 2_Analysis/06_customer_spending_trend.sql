@@ -1,8 +1,8 @@
 ﻿/*
 ===========================================================
-📊 Analysis: Customer Spending Trend
+Analysis: Customer Spending Trend
 
-🧠 Objective:
+Objective:
 Analyze how individual customer spending evolves over time by:
 
 - Calculating cumulative (running) total sales per customer
@@ -10,7 +10,7 @@ Analyze how individual customer spending evolves over time by:
 
 -----------------------------------------------------------
 
-⚙️ Methodology:
+Methodology:
 1. Aggregate sales at order level per customer
 2. Use window functions to compute:
     → Running total (lifetime spend progression)
@@ -18,7 +18,7 @@ Analyze how individual customer spending evolves over time by:
 
 -----------------------------------------------------------
 
-📈 Output:
+Output:
 - Customer
 - Order details
 - Running total spend
@@ -29,7 +29,7 @@ Analyze how individual customer spending evolves over time by:
 
 /*
 -----------------------------------------------------------
-🧠 Design Decisions & Justification
+Design Decisions & Justification
 
 1. Why aggregate at order level?
    - Ensures correct granularity for customer transactions

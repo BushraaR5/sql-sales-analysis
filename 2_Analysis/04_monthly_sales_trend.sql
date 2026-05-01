@@ -1,34 +1,35 @@
 ﻿/*
 ===========================================================
-📊 Analysis: Monthly Sales Trend & Growth
+Analysis: Monthly Sales Trend & Growth
 
-🧠 Objective:
+Objective:
 Analyze how sales evolve over time and measure
 month-over-month (MoM) growth to identify trends,
 seasonality, and performance shifts.
 
 -----------------------------------------------------------
 
-⚙️ Methodology:
+Methodology:
 1. Aggregate sales at monthly level
 2. Use LAG() to get previous month’s sales
 3. Calculate MoM growth %
 
 -----------------------------------------------------------
 
-📈 Output:
+Output:
 - Year
 - Month
 - Total sales
 - Previous month sales
 - Month-over-month growth %
+- Rolling 3 month average
 
 ===========================================================
 */
 
 /*
 -----------------------------------------------------------
-🧠 Design Decisions & Justification
+Design Decisions & Justification
 
 1. Why use CTE?
    - Separates aggregation from window logic
@@ -56,37 +57,34 @@ seasonality, and performance shifts.
 
 WITH monthly_sales AS (
     SELECT 
-        YEAR(order_date) AS year,
-        MONTH(order_date) AS month,
+        EOMONTH(order_date) AS month_end,
         SUM(sales_amount) AS total_sales
     FROM gold.fact_sales
     WHERE order_date IS NOT NULL
-    GROUP BY YEAR(order_date), MONTH(order_date)
+    GROUP BY EOMONTH(order_date)
 ),
 
 final AS (
     SELECT 
-        year,
-        month,
+        month_end,
         total_sales,
-
-        -- Previous month sales
-        LAG(total_sales) OVER (
-            ORDER BY year, month
-        ) AS prev_month_sales
-
+        LAG(total_sales) OVER (ORDER BY month_end) AS prev_month_sales,
+		AVG(total_sales) OVER (
+            ORDER BY month_end
+            ROWS BETWEEN 2 PRECEDING AND CURRENT ROW
+        ) AS rolling_avg_3m
     FROM monthly_sales
 )
 
 SELECT 
-    year,
-    month,
+    month_end,
     total_sales,
     prev_month_sales,
-
-    -- MoM growth %
+    COALESCE(
     (total_sales - prev_month_sales) * 1.0 
-        / NULLIF(prev_month_sales, 0) AS mom_growth_pct
-
+    / NULLIF(prev_month_sales, 0),
+    0
+    ) AS mom_growth_pct,
+	rolling_avg_3m
 FROM final
-ORDER BY year, month;
+ORDER BY month_end;

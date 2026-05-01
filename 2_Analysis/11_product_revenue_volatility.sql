@@ -1,8 +1,8 @@
 ﻿/*
 ===========================================================
-📊 Analysis: Product Revenue Volatility
+Analysis: Product Revenue Volatility
 
-🧠 Objective:
+Objective:
 Measure how stable or volatile product revenue is over time
 to identify:
 
@@ -11,7 +11,7 @@ to identify:
 
 -----------------------------------------------------------
 
-⚙️ Methodology:
+Methodology:
 1. Aggregate revenue at monthly level per product
 2. Calculate:
     → Average monthly revenue
@@ -21,7 +21,7 @@ to identify:
 
 -----------------------------------------------------------
 
-📈 Output:
+Output:
 - Avg monthly revenue
 - Revenue volatility (standard deviation)
 - CV (relative volatility)
@@ -32,7 +32,7 @@ to identify:
 
 /*
 -----------------------------------------------------------
-🧠 Design Decisions & Justification
+Design Decisions & Justification
 
 1. Why aggregate by month (EOMONTH)?
    - Standardizes time intervals

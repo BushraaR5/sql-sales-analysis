@@ -1,20 +1,20 @@
 ﻿/*
 ===========================================================
-📊 Analysis: Customer Churn & Revenue Impact
+Analysis: Customer Churn & Revenue Impact
 
-🧠 Objective:
+Objective:
 Identify churned customers and quantify their impact on:
 - Customer base (% churned)
 - Revenue (% revenue lost)
 
 -----------------------------------------------------------
 
-📌 Churn Definition:
+Churn Definition:
 - Customers with recency > 6 months are considered churned
 
 -----------------------------------------------------------
 
-⚙️ Methodology:
+Methodology:
 - Use conditional aggregation to:
     → Count churned customers
     → Sum their revenue
@@ -22,7 +22,7 @@ Identify churned customers and quantify their impact on:
 
 -----------------------------------------------------------
 
-📈 Output:
+Output:
 - % of customers churned
 - Revenue from churned customers
 - % of revenue lost due to churn
@@ -32,7 +32,7 @@ Identify churned customers and quantify their impact on:
 
 /*
 -----------------------------------------------------------
-🧠 Design Decisions & Justification
+Design Decisions & Justification
 
 1. Why conditional aggregation?
    - Avoids multiple scans of the same table

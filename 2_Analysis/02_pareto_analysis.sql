@@ -1,8 +1,8 @@
 ﻿/*
 ===========================================================
-📊 Analysis: Revenue Concentration (Pareto Analysis)
+Analysis: Revenue Concentration (Pareto Analysis)
 
-🧠 Objective:
+Objective:
 Analyze how revenue is distributed across customers and
 determine whether a small percentage of customers contributes
 a large portion of total revenue.
@@ -13,7 +13,7 @@ Specifically:
 
 -----------------------------------------------------------
 
-⚙️ Methodology:
+Methodology:
 1. Rank customers based on total_sales (descending)
 2. Compute cumulative revenue using window functions
 3. Identify:
@@ -22,7 +22,7 @@ Specifically:
 
 -----------------------------------------------------------
 
-📈 Output:
+Output:
 - % Revenue from top 20% customers
 - % Customers contributing to 20% revenue
 
@@ -31,7 +31,7 @@ Specifically:
 
 /*
 -----------------------------------------------------------
-🧠 Design Decisions & Justification
+Design Decisions & Justification
 
 1. Why use RANK() instead of ROW_NUMBER()?
    - Customers may have identical total_sales
@@ -73,7 +73,7 @@ WITH top20_revenue AS (
 )
 
 -----------------------------------------------------------
--- 📊 1. % Revenue from Top 20% Customers
+-- 1. % Revenue from Top 20% Customers
 -----------------------------------------------------------
 SELECT
     ROUND(
@@ -85,7 +85,7 @@ FROM top20_revenue
 WHERE rnk <= FLOOR(0.2 * (SELECT COUNT(*) FROM gold.report_customers));
 
 -----------------------------------------------------------
--- 📊 2. % Customers that generate 20% Revenue
+-- 2. % Customers that generate 20% Revenue
 -----------------------------------------------------------
 
 -- Comment previous select query and uncomment the below to get result for the below

@@ -1,22 +1,22 @@
 ﻿/*
 ===========================================================
-📊 Analysis: RFM Customer Segmentation
+Analysis: RFM Customer Segmentation
 
-🧠 Objective:
+Objective:
 Segment customers based on Recency, Frequency, and Monetary value
 to identify high-value users, churn risks, and growth opportunities.
 
-⚙️ Methodology:
+Methodology:
 - Recency (R): Scored using CUME_DIST (better than NTILE for distribution accuracy)
 - Frequency (F): Bucketed using business-defined order ranges
 - Monetary (M): Scored using revenue distribution
 
-📈 Output:
+Output:
 - R, F, M scores (1–5 scale)
 - Combined RFM code
 - Customer segments (Champions, Loyal, At Risk, etc.)
 
-💡 Key Notes:
+Key Notes:
 - Recency is treated as the strongest behavioral indicator
 - Segment ordering is carefully designed to avoid misclassification
 ===========================================================
@@ -24,7 +24,7 @@ to identify high-value users, churn risks, and growth opportunities.
 
 /*
 -----------------------------------------------------------
-🧠 Design Decisions & Justification
+Design Decisions & Justification
 
 1. Why CUME_DIST() instead of NTILE(5)?
    - NTILE creates equal-sized buckets but can split identical values across groups

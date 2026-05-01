@@ -1,8 +1,8 @@
 ﻿/*
 ===========================================================
-📊 Analysis: Customer Cohort Analysis
+Analysis: Customer Cohort Analysis
 
-🧠 Objective:
+Objective:
 Analyze customer behavior based on acquisition cohorts
 (year of first purchase) to understand:
 
@@ -12,7 +12,7 @@ Analyze customer behavior based on acquisition cohorts
 
 -----------------------------------------------------------
 
-⚙️ Methodology:
+Methodology:
 - Define cohort as: YEAR(first_order)
 - Aggregate metrics per cohort:
     → Total customers
@@ -21,7 +21,7 @@ Analyze customer behavior based on acquisition cohorts
 
 -----------------------------------------------------------
 
-📈 Output:
+Output:
 One row per cohort year with key performance metrics
 
 ===========================================================
@@ -29,7 +29,7 @@ One row per cohort year with key performance metrics
 
 /*
 -----------------------------------------------------------
-🧠 Design Decisions & Justification
+Design Decisions & Justification
 
 1. Why use YEAR(first_order)?
    - Represents customer acquisition timing

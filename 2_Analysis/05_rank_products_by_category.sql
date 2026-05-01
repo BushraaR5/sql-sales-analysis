@@ -1,21 +1,21 @@
 ﻿/*
 ===========================================================
-📊 Analysis: Top Products Within Each Category
+Analysis: Top Products Within Each Category
 
-🧠 Objective:
+Objective:
 Identify the top 3 products within each category based on
 total sales to understand product performance distribution.
 
 -----------------------------------------------------------
 
-⚙️ Methodology:
+Methodology:
 1. Partition products by category
 2. Rank products within each category using ROW_NUMBER()
 3. Select top 3 products per category
 
 -----------------------------------------------------------
 
-📈 Output:
+Output:
 - Category
 - Product Name
 - Total Sales
@@ -26,7 +26,7 @@ total sales to understand product performance distribution.
 
 /*
 -----------------------------------------------------------
-🧠 Design Decisions & Justification
+Design Decisions & Justification
 
 1. Why use ROW_NUMBER()?
    - Ensures exactly top 3 products per category

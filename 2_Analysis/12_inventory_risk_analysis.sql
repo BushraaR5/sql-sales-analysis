@@ -1,8 +1,8 @@
 ﻿/*
 ===========================================================
-📊 Analysis: Aging Inventory Risk
+Analysis: Aging Inventory Risk
 
-🧠 Objective:
+Objective:
 Identify products at risk of becoming dead stock by combining:
 
 - Low sales performance
@@ -10,14 +10,14 @@ Identify products at risk of becoming dead stock by combining:
 
 -----------------------------------------------------------
 
-📌 Risk Definition:
+Risk Definition:
 Products are considered at risk if:
 - recency > 6 months (not sold recently)
 - AND total_sales below defined thresholds
 
 -----------------------------------------------------------
 
-⚙️ Methodology:
+Methodology:
 1. Calculate sales thresholds using percentiles:
     → P25 (low-performing products)
     → P50 (median performance)
@@ -29,7 +29,7 @@ Products are considered at risk if:
 
 -----------------------------------------------------------
 
-📈 Output:
+Output:
 - Product details
 - Sales thresholds (P25, P50)
 - Inventory risk classification
@@ -39,7 +39,7 @@ Products are considered at risk if:
 
 /*
 -----------------------------------------------------------
-🧠 Design Decisions & Justification
+Design Decisions & Justification
 
 1. Why use PERCENTILE_CONT()?
    - Dynamically calculates thresholds based on data distribution
