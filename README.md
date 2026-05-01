@@ -2,9 +2,11 @@
 
 ## 🧠 Project Overview
 
-This project analyzes an e-commerce dataset using advanced SQL techniques to uncover insights related to customer behavior, revenue distribution, product performance, and business risk.
+This project analyzes an e-commerce dataset using advanced SQL techniques and Excel-based visualizations to uncover actionable business insights related to customer behavior, revenue distribution, product performance, and business risk.
 
 The goal is to simulate a real-world business scenario where SQL is used not just for querying data, but for generating actionable insights that can support decision-making.
+
+📌 Note: All visualizations were created in Excel using structured outputs from SQL queries to simulate real-world analyst workflows.
 
 ---
 
@@ -89,7 +91,7 @@ Enhancements in this project include:
 - Ranked products using `ROW_NUMBER()` and `CROSS APPLY`
 - Identified top-performing products per category and subcategory
 
-<img src="3_outputs/07_product_contribution_analysis_result_1.png">
+<img src="3_outputs/07_product_contribution_analysis_result.png">
 
 ---
 
@@ -134,25 +136,84 @@ Enhancements in this project include:
 
 ## 🔍 Key Insights
 
+- Customer value is highly concentrated, with a small segment contributing disproportionately to total revenue (long-tail distribution)
 - High-value customers can be identified early using RFM segmentation, enabling targeted retention strategies
-- Top 20% of customers contribute a disproportionate share of total revenue, confirming a strong Pareto distribution
-- Revenue is heavily concentrated in a small subset of products, indicating potential dependency risk
-- Customer churn significantly impacts both revenue and long-term growth potential
-- Product associations reveal cross-selling opportunities for increasing average order value
-- Revenue volatility highlights demand instability in certain product categories
+- Revenue growth accelerated significantly in 2013, supported by consistent upward trends in rolling averages
+- Churn impact is driven more by customer value than volume, with high-value segments posing the greatest risk
+- Product revenue follows a Pareto distribution, with a small subset driving the majority of sales
+- Product associations reveal strong cross-selling opportunities that can increase average order value
+- Revenue volatility varies across products, highlighting stability differences and inventory planning implications
 
 ---
 
-## 📸 Sample Outputs
+## 📊 Data Visualization
 
-Query results were validated using SQL Server.
+Query results were exported to Excel and visualized using appropriate chart types to enhance interpretability and communicate business insights effectively.
 
-Key outputs (screenshots) are available in the `outputs/` folder, 
-highlighting:
-- Customer segmentation results
-- Revenue concentration patterns
-- Cohort retention trends
-- Product performance rankings
+Each visualization is built directly from SQL outputs, ensuring analytical accuracy while improving storytelling.
+
+---
+
+### 🧠 Customer Segmentation (RFM Analysis)
+
+- Customers are distributed across segments such as Lost, New, High Potential, and Cannot Lose Them
+- A significant portion falls into churn-risk categories, indicating retention opportunities
+
+---
+
+### 📈 Monthly Sales Trend & Growth
+
+- Sales remained stable during 2011–2012 and entered a strong growth phase in 2013
+- A 3-month rolling average was used to smooth volatility and reveal underlying trends
+- MoM growth highlights fluctuations during expansion phases
+
+---
+
+### 📉 Customer Lifetime Value Distribution (Long-Tail)
+
+- Customer value follows a long-tail distribution
+- A small group of customers contributes disproportionately high value
+- Majority of customers fall into low-value segment
+
+---
+
+### 🔄 Customer Retention Distribution
+
+- High retention group dominates the customer base
+- Clear segmentation between high and low retention cohorts
+- Indicates opportunities to convert medium/low retention users
+
+---
+
+### ⚠️ Customer Churn Impact
+
+- “Cannot Lose Them” segment contributes highest revenue loss despite fewer customers
+- Churn impact is not volume-driven but value-driven
+- Highlights need for targeted retention strategies
+
+---
+
+### 📊 Product Revenue Concentration (Pareto)
+
+- Top products contribute ~80% of total revenue
+- Strong Pareto effect indicates revenue concentration risk
+- Enables prioritization of high-impact products
+
+---
+
+### 📉 Product Revenue vs Volatility
+
+- High-revenue products tend to be more stable
+- Low-revenue products show higher volatility
+- Helps identify reliable vs risky product segments
+
+---
+
+### 🛒 Product Associations (Basket Analysis)
+
+- Strong product pairings identified using lift score
+- Highlights cross-selling opportunities
+- Useful for recommendation strategies
 
 ---
 
